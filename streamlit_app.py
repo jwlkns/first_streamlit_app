@@ -6,7 +6,7 @@ from urllib.error import URLError
 
 def get_fruityvice_data(fruit: str):
   # Send request
-  response = requests.get(f"https://fruityvice.com/api/fruit/{fruit_choice}")
+  response = requests.get(f"https://fruityvice.com/api/fruit/{fruit}")
   # Normalize and return api response
   return pandas.json_normalize(response.json())
 
