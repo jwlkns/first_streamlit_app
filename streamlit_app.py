@@ -21,7 +21,7 @@ def insert_row_snowflake(fruit: str):
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 
   with my_cnx.cursor() as my_cur:
-    my_cur.execute(f"INSERT INTO FRUIT_LOAD_LIST VALUES ({fruit})")
+    my_cur.execute(f"INSERT INTO FRUIT_LOAD_LIST VALUES ('{fruit}')")
   streamlit.text('Thanks for adding ', add_fruit)
 
 streamlit.title("My Parents New Healthy Diner")
