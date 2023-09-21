@@ -8,7 +8,7 @@ def get_fruityvice_data(fruit: str):
   # Send request
   response = requests.get(f"https://fruityvice.com/api/fruit/{fruit_choice}")
   # Normalize and return api response
-  return pandas.json_normalize(fruityvice_response.json())
+  return pandas.json_normalize(response.json())
 
 streamlit.title("My Parents New Healthy Diner")
 
